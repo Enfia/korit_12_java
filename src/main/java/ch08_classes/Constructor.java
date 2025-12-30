@@ -41,4 +41,16 @@ public class Constructor {
         System.out.println("RequiredArgsConstructor(int 매개변수를 필수로 요구하는 생성자)");
         this.num = number;  // this : 해당 클래스에서 객체를 생성하게 되면 객체 이름으로 대체됨.
     }
+    public Constructor(String title){
+        System.out.println("String 매개변수를 필수로 요구함");
+        this.name = title;
+    }
+    public Constructor(int number, String title){
+        System.out.println("int, String 매개변수를 필수로 요구함");
+        this.num = number;
+        this.name = title;
+    }
+    public void displayInfo() {
+        System.out.println(name + " 학생 학번은 " + num);
+    }
 }

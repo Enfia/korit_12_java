@@ -1,0 +1,78 @@
+package ch08_classes.students;
+/*
+    1. Student 클래스의 필드를 정의하시오.
+        1) int studentCode
+        2) String name
+        3) double score
+
+    2. 기본 생성자를 정의하고, 객체를 생성했을 때,
+        "기본 생성자로 객체를 생성했습니다." 라고 출력되도록
+        코드를 작성하시오.
+    3. int StudentCode를 매개변수로 하는 매개변수 생성자를 정의,
+        "int 매개변수 생성자로 객체를 생성했습니다."라고 출력되도록
+        코드를 작성하시오.
+    4. String name을 매개변수로 하는 매개변수 생성자를 정의,
+        "String 매개변수 생성자로 객체를 생성했습니다."라고 출력되도록
+        코드를 작성하시오.
+    5. studentCode, name을 매개변수로 하는 매개변수 생성자를 정의,
+        "int, String 매개변수 생성자로 객체를 생성했습니다."라고 출력되도록
+        코드를 작성하시오.
+    6. studentCode, name, score를 매개변수로 하는 매개변수 생성자를 정의,
+        "int, String, double 매개변수 생성자로 객체를 생성했습니다."라고 출력되도록
+        코드를 작성하시오.
+
+    7. StudentMain 클래스에, 해당 객체명과 속성명을 가질 수 있도록 작성하시오.
+        1) student1 2025001 / 김일 / 4.5 -> 기본생성자
+        2) student2 2025002 / 김이 / 100 -> int 매개변수 생성자
+        3) student3 2025003 / 김삼 / 95.8 -> String 매개변수 생성자
+        4) student4 2025004 / 김사 / 4.0 -> int, String 매개변수 생성자
+        5) student5 2025005 / 김오 / 80.7 -> int, String, double 매개변수 생성자
+
+    8. 학생의 정보가 출력될 수 있도록 하는 showInfo() 메서드를 call1() 타입으로 정의하시오.
+
+    9. 실행 예
+        기본 생성자로 객체가 생성되었습니다.
+        int 매개변수 생성자로 객체를 생성했습니다.
+        String 매개변수 생성자로 객체를 생성했습니다.
+        int, String 매개변수 생성자로 객체를 생성했습니다.
+        int, String, double 매개변수 생성자로 객체를 생성했습니다.
+
+        김일 학생의 정보입니다.
+        학번 : 2025001
+        이름 : 김일
+        점수 : 4.5
+
+        김이 학생의 정보입니다.
+        ...
+ */
+public class StudentMain {
+    public static void main(String[] args) {
+        Student student1 = new Student();
+        student1.studentCode = 2025001;
+        student1.name= "김일";
+        student1.score = 4.5;
+
+        Student student2 = new Student(2025002);
+        student2.name = "김이";
+        student2.score = 100;
+
+        Student student3 = new Student("김삼");
+        student3.studentCode=2025003;
+        student3.score = 95.8;
+
+        Student student4 = new Student(2025004, "김사");
+        student3.score = 4.0;
+
+        Student student5 = new Student(2025005, "김오",80.7);
+
+        student1.showInfo();
+        student2.showInfo();
+        student3.showInfo();
+        student4.showInfo();
+        student5.showInfo();
+
+        Student2 student21 = new Student2(2026,"김이심일",1000);
+    }
+
+
+}
