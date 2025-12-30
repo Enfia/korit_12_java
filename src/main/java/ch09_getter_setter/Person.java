@@ -7,6 +7,7 @@ class Person {
 
     public Person() {
     }
+
     public Person(String name) {
         this.name = name;
     }
@@ -20,18 +21,16 @@ class Person {
         System.out.println("변경전 : " + this.name);
         this.name = name;
         System.out.println("변경 후 : " + this.name);
-
-
     }
+
     public void setAge(int age){
         if (age <0 || age > 200){
             this.age = 0;
             return;
         }
             this.age = age;
-
-
     }
+
     public void setAddress(String address){
         this.address = address;
     }
@@ -39,10 +38,8 @@ class Person {
     public String getName(){
         return name;
     }
+
     public int getAge(){
         return age;
-    }
-    public String getAddress(){
-        return address;
     }
 }
