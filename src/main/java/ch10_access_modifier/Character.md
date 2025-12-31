@@ -1,8 +1,6 @@
-package ch10_access_modifier;
-/*
-    목표 : 객체 지향 설계 및 접근 제어자 이해를 바탕으로
-    다양한 접근 수준의 필드와 메서드를 갖는 캐릭터 클래스를 정의,
-    이를 CharacterMain 클래스에서 기능 테스트를 수행 할겁니다.
+목표 : 객체 지향 설계 및 접근 제어자 이해를 바탕으로
+다양한 접근 수준의 필드와 메서드를 갖는 캐릭터 클래스를 정의,
+이를 CharacterMain 클래스에서 기능 테스트를 수행 할겁니다.
 
     Character 클래스 설계
     1. field
@@ -29,7 +27,3 @@ package ch10_access_modifier;
         getExp(int amount) -> call2() 유형인데 경험치를 증가시키는 메서드(내부 전용)
             실행 예
             name이(가) 경험치 amount을(를) 얻었습니다. 라고 출력되게.
- */
-
-public class Charatermd {
-}
