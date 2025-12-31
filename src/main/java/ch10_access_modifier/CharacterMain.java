@@ -93,6 +93,12 @@ public class CharacterMain {
         warrior.attack();
         warrior.heal();
         Character healer = new Character("힐러", 100,"치료");
-        System.out.println(healer.name);
+        System.out.println(healer.name + healer.getExp());
+        healer.attack();
+        healer.attack();
+        healer.attack();
+        healer.attack();
+        healer.attack();
+        healer.attack();
     }
 }

@@ -31,5 +31,5 @@ package ch10_access_modifier;
             name이(가) 경험치 amount을(를) 얻었습니다. 라고 출력되게.
  */
 
-public class Asdmd {
+public class Charatermd {
 }
