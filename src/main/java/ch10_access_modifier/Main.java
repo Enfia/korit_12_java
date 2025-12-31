@@ -6,13 +6,6 @@ class AccessModifierExample{
     int defaultVar = 30;
     private int privateVar;
 
-    public void setPrivateVar(int pri){
-        if(pri > 10){
-            this.privateVar = pri;
-            System.out.println("어쩔");
-            return;
-        }
-    }
     public int getPrivateVar() {
         return privateVar;
     }
@@ -20,6 +13,6 @@ class AccessModifierExample{
 public class Main {
     public static void main(String[] args) {
         AccessModifierExample example = new AccessModifierExample();
-        example.setPrivateVar(20);
+        ;
     }
 }

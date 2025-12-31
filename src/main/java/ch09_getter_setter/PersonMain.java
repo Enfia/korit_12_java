@@ -10,8 +10,9 @@ public class PersonMain {
 //        person1.address = "부산광역시 부산진구";
 //        System.out.println(person1.name + person1.age + person1.address)
 
-        person1.setName("asd");
+        person1.setName("asdsadasd");
         person1.setName("김일이");
+        person1.setAge(10);
         System.out.println(person1.getName()+" 학생의 나이는 " + person1.getAge());
     }
 }
