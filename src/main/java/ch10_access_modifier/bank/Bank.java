@@ -57,7 +57,7 @@ public class Bank {
 
     public void setPinNumber(int pinNumber) {
         if(pinNumber<0 || pinNumber>9999||pinNumberLength > 4){
-            System.out.println("불가능한 비밀번호입니다.");
+            System.out.println("불가능한 비밀번호입니다."+"\n");
             return;
         }
         System.out.println("성공적으로 비밀번호를 생성하였습니다.");
@@ -84,36 +84,35 @@ public class Bank {
         if (pinNumber == inputPin){
             System.out.println("올바른 비밀번호 입니다.");
             if(amount < 0){
-                System.out.println("불가능한 입력 금액입니다.");
+                System.out.println("불가능한 입력 금액입니다."+"\n");
                 return;
             }
             System.out.println(amount +"원 보낼게요");
             this.balance += amount;
-            System.out.println("현재 잔액 : " + this.balance);
+            System.out.println("현재 잔액 : " + this.balance+"\n");
             return;
         }
-        System.out.println("비밀번호가 틀렸습니다.");
+        System.out.println("비밀번호가 틀렸습니다."+"\n");
     }
 
     public void withdraw(int amount, int inputPin){
         if (pinNumber == inputPin){
             System.out.println("올바른 비밀번호 입니다.");
             if(amount < 0 || balance < amount){
-                System.out.println("불가능한 입력 금액입니다.");
+                System.out.println("불가능한 입력 금액입니다."+"\n");
                 return;
             }
             System.out.println(amount + "원 꺼낼게요");
             this.balance -= amount;
-            System.out.println("현재 잔액 : " + this.balance);
+            System.out.println("현재 잔액 : " + this.balance+"\n");
             return;
         }
-        System.out.println("비밀번호가 틀렸습니다.");
+        System.out.println("비밀번호가 틀렸습니다."+"\n");
     }
 
     public void showAccountInfo(){
         System.out.println("계좌 번호 : " + getAccountNum());
         System.out.println("계좌 소유자 : "+ getAccountHolder());
-        System.out.println("현재 잔액 : " + getBalance());
+        System.out.println("현재 잔액 : " + getBalance()+"\n");
     }
-
 }

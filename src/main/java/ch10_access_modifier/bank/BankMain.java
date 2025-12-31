@@ -9,11 +9,8 @@ public class BankMain {
         Bank account1 = new Bank(123456, "홍길동", 100000, 1234);
         Bank account2 = new Bank(987654, "신사임당", 500000, 1234);
 
-        System.out.println();
         account1.showAccountInfo();
-        System.out.println();
         account2.showAccountInfo();
-        System.out.println();
 
         account1.deposit(50000,1234);
         account1.withdraw(200000, 1234);
@@ -22,10 +19,9 @@ public class BankMain {
         account2.withdraw(100000,1234);
         account2.deposit(200000,1234);
 
-        System.out.println();
+
         System.out.println("최종 계좌 정보");
         account1.showAccountInfo();
-        System.out.println();
         account2.showAccountInfo();
 
     }
