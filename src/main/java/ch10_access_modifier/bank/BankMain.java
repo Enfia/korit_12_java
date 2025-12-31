@@ -12,7 +12,7 @@ public class BankMain {
         account1.showAccountInfo();
         account2.showAccountInfo();
 
-        account1.deposit(50000,1234);
+        account1.deposit(150000,1234);
         account1.withdraw(200000, 1234);
         account1.withdraw(100000, 1234);
 

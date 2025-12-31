@@ -2,7 +2,7 @@
 다양한 접근 수준의 필드와 메서드를 갖는 캐릭터 클래스를 정의,
 이를 CharacterMain 클래스에서 기능 테스트를 수행 할겁니다.
 
-    Character 클래스 설계
+Character 클래스 설계
     1. field
         name - 캐릭터 이름 / 공개 가능
         health - 체력 / 읽기만 허용

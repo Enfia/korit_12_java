@@ -5,9 +5,6 @@ public class Bank {
     private String accountHolder;
     private int balance;
     private int pinNumber;
-    private final int pinNumberLength =  (int)(Math.log10(pinNumber)+1);
-    // final은 잘 모르지만 에디터에서 final 붙이라고 해서 붙임
-    // 잘모르겠지만 뭔가 글자수로 변환을 시켜주는 거 같음
 
     // 2-1
     public Bank() {
@@ -56,11 +53,11 @@ public class Bank {
     }
 
     public void setPinNumber(int pinNumber) {
-        if(pinNumber<0 || pinNumber>9999||pinNumberLength > 4){
+        if(pinNumber<0 || pinNumber>9999){
             System.out.println("불가능한 비밀번호입니다."+"\n");
             return;
         }
-        System.out.println("성공적으로 비밀번호를 생성하였습니다.");
+//        System.out.println("성공적으로 비밀번호를 생성하였습니다.");
         this.pinNumber = pinNumber;
     }
 
@@ -82,29 +79,26 @@ public class Bank {
 
     public void deposit(int amount, int inputPin){
         if (pinNumber == inputPin){
-            System.out.println("올바른 비밀번호 입니다.");
-            if(amount < 0){
+//            System.out.println("올바른 비밀번호 입니다.");
+            if(amount <= 0){
                 System.out.println("불가능한 입력 금액입니다."+"\n");
                 return;
             }
-            System.out.println(amount +"원 보낼게요");
             this.balance += amount;
-            System.out.println("현재 잔액 : " + this.balance+"\n");
-            return;
+            System.out.println(amount +"원이 입금되었습니다. 현재 잔액 : " + this.balance+"\n");return;
         }
         System.out.println("비밀번호가 틀렸습니다."+"\n");
     }
 
     public void withdraw(int amount, int inputPin){
         if (pinNumber == inputPin){
-            System.out.println("올바른 비밀번호 입니다.");
-            if(amount < 0 || balance < amount){
+//            System.out.println("올바른 비밀번호 입니다.");
+            if(amount <= 0 || balance < amount){
                 System.out.println("불가능한 입력 금액입니다."+"\n");
                 return;
             }
-            System.out.println(amount + "원 꺼낼게요");
             this.balance -= amount;
-            System.out.println("현재 잔액 : " + this.balance+"\n");
+            System.out.println(amount + "원이 출금되었습니다. 현재 잔액 :"+ this.balance+"\n");
             return;
         }
         System.out.println("비밀번호가 틀렸습니다."+"\n");
