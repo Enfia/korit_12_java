@@ -7,13 +7,13 @@ public class Array01 {
             arr04[i] = 41 + i;
             System.out.print(arr04[i]+ " ");
         }
-//        String[] arr05 = new String[5];
-//        arr05[0] = "안";
-//        arr05[1] = "녕";
-//        arr05[2] = "하";
-//        arr05[3] = "세";
-//        arr05[4] = "요";
-        String[] arr05 = {"안", "녕", "하", "세", "요"};
+        String[] arr05 = new String[5];
+        arr05[0] = "안";
+        arr05[1] = "녕";
+        arr05[2] = "하";
+        arr05[3] = "세";
+        arr05[4] = "요";
+//        String[] arr05 = {"안", "녕", "하", "세", "요"};
         for(int i=0; i < arr05.length; i++){
             System.out.print(arr05[i]);
         }

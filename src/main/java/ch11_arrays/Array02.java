@@ -9,12 +9,15 @@ public class Array02 {
         int count = sc.nextInt();
         sc.nextLine();
         String[] humans = new String[count];
+
         for(int i = 0; i< humans.length; i++){
             System.out.println((i + 1)+"번 학생의 이름을 입력해주세요 >>>");
             humans[i] = sc.nextLine();
         }
+
         int[] score = new int[count];
         int scoreSum = 0;
+
         for(int i = 0; i<humans.length; i++){
            System.out.println(humans[i] +" 학생의 점수를 입력해주세요 >>>");
            score[i] = sc.nextInt();
