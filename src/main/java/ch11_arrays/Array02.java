@@ -15,12 +15,12 @@ public class Array02 {
 //            humans[i] = sc.nextLine();
 //        }
 //
-//        int[] score = new int[count];
-//        int scoreSum = 0;
+//        double[] score = new double[count];
+//        double scoreSum = 0;
 //
 //        for(int i = 0; i<humans.length; i++){
 //            System.out.println(humans[i] +" 학생의 점수를 입력해주세요 >>>");
-//            score[i] = sc.nextInt();
+//            score[i] = sc.nextDouble();
 //            sc.nextLine();
 //            scoreSum += score[i];
 //        }
