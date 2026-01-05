@@ -14,8 +14,7 @@ public class Array09EnhancedFor {
 
         int i = 0;
         for(String person : persons){
-            System.out.println((i+1) + "번 : " + person);
-            i++;
+            System.out.println((++i) + "번 : " + person);
         }
 
 
