@@ -46,6 +46,8 @@ public class Array03Method {
         System.out.println("학생들의 점수 평균은 "+Arrays.stream(scores).average().getAsDouble() + "점입니다.");
     }
 
+
+
     public static void main(String[] args) {
         Array03Method arrays03Method = new Array03Method();
         arrays03Method.writeNameAndScore();
