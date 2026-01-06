@@ -13,6 +13,7 @@ public class Array15Lotto {
                 lottoNumber[i] = rd.nextInt(45) + 1;
             }
             System.out.println(Arrays.toString(lottoNumber));
+
         }
 
 
