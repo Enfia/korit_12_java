@@ -22,10 +22,15 @@ import java.util.Random;
 
 public class Array11 {
     public static void main(String[] args) {
+        // 1부터 10까지의 범위로 만들고 싶다면?
+        // 배열 선언, 객체 만들기
         Integer[] numbers = new Integer[10];
         Random rd = new Random();
+
+        //랜덤 변수 담기
         for(int i = 0; i < numbers.length; i++){
-            numbers[i] = rd.nextInt();
+            numbers[i] = rd.nextInt(10) + 1;
+            numbers[i] *= 10;
         }
 
         // 오름 차순
@@ -38,8 +43,7 @@ public class Array11 {
 
         // 10 곱하기
         for (Integer number : numbers){
-            System.out.print((number*10 )+ " / ");
+            System.out.print((number)+ " / ");
         }
-
     }
 }
