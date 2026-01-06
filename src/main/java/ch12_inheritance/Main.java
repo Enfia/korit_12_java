@@ -1,4 +1,5 @@
 package ch12_inheritance;
+
 /*
     객체 지향 프로그래밍의 핵심 개념
     기존 클래스 변수와 함수를 재사용하여 새로운 클래스를 만드는 것을 의미함
@@ -33,9 +34,37 @@ package ch12_inheritance;
         - 그래서 동물 호랑이 사람 클래스를 예로 들었을때 사람 호랑이는 동물 클래스의 자식(서브) 클래스임
         - 넓은 범위를 가지는 것이 부모 클래스가 될 것이고, 좀 더 구체적이고 특징 지어진 것이 자식 클래스가 될 것임
 
+    # super 키워드
+    1. super() : 부모 클래스의 생성자를 호출
+    2. super.함수명() : 부모 클래스의 함수를 호출
+
 */
+
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("asd");
+//        Animal animal1 = new Animal();
+//        animal1.move();
+//        animal1.setAnimalName("동물");
+//        animal1.setAnimalAge(12);
+//
+//        Tiger tiger1 = new Tiger();
+//        tiger1.setAnimalName("호랑이");
+//        tiger1.setAnimalAge(1);
+//        System.out.println("호랑이의 이름은 "+tiger1.getAnimalName()+"이고 나이는 " + tiger1.getAnimalAge() +  "살 입니다.");
+//        tiger1.move();
+//        tiger1.hunt();
+//        tiger1.hunt("날치");
+//
+//        tiger1.setWeight(1.4);
+//        System.out.println(tiger1.getAnimalName() + "의 몸무게는 "+tiger1.getWeight() + "t 입니다.")
+// --------------------------------------------------------------------------------------------------------------------
+        Human human1 = new Human();
+        human1.move();
+        human1.setAnimalAge(21);
+        human1.setAnimalName("김상윤");
+        System.out.println("안녕하세요, 제 이름은 " + human1.getAnimalName()+ "이고 나이는 " + human1.getAnimalAge()+"살 입니다.");
+        System.out.println("내년에는 "+ (human1.getAnimalAge() + 1) + "살이 됩니다.");
+        human1.read("자바의 기초");
     }
 }
