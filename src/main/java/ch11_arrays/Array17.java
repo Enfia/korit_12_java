@@ -3,7 +3,7 @@ package ch11_arrays;
 import java.util.Arrays;
 
 /*
-원리
+선생님께서의 원리
 int round = 5;  // 그냥 5 게임으로 가정하겠습니다.
 그리고 round를 이용하여 2차 배열을 만들어도 되죠
 int[][] lottoNumsSet = new int[round][6];
@@ -22,7 +22,13 @@ int[][] lottoNumsSet = new int[round][6];
 중복이 되면 우리 뭐해야한다? -> 다시 뽑아서 temp에 저장해야한다. 그리고 또 확인해야한다.
 */
 
-
+/*
+나의 풀이
+int[] lottoNums = new Int[6] 배열을 선언 6칸으로 한다
+int roundNum =5; 라운드 5번 할거임
+int temp = 0; 중복되는 숫자인지 확인하기 위해서 선언
+boolean duplicate; //중복이 됐을 때 true로 바꿔서 다시 번호를 뽑는다
+*/
 
 public class Array17 {
     public static void main(String[] args) {
@@ -33,8 +39,7 @@ public class Array17 {
 
         // int[][] lottoNumSet = new int [round][6]; 자습시간에 해보기, 로또 다시 만들어보기
         for (int j = 0; j < roundNum; j++ ) {
-            int cnt = 1; // count임
-                // 이해하기
+            int cnt = 1; // count
             for (int i = 0; i < lottoNums.length; i++) {
                 duplicate = false;  // 초기화함
                 temp = (int) (Math.random() * 45) + 1; //element 값과 다르면 집어넣는 과정을 추가
