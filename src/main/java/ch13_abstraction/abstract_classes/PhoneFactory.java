@@ -11,4 +11,6 @@ public class PhoneFactory extends Factory{
     public void manage() {
         System.out.println("모바일 폰 공장을 관리합니다.");
     }
+
+
 }
