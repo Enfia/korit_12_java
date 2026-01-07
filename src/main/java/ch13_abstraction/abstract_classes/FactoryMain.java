@@ -44,5 +44,7 @@ public class FactoryMain {
         };
         factory2.setName("삼성 컴퓨터 공장");
         factory2.showInfo();
+//        PhoneFactory phoneFactory1 = new PhoneFactory();
+//        phoneFactory1.showInfo(); // 테스트함
     }
 }
