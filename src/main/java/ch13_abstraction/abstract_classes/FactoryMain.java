@@ -23,6 +23,7 @@ public class FactoryMain {
 //        phoneFactory1.showInfo();
 
         TabletFactory tabletFactory1 = new TabletFactory();
+        tabletFactory1.setName("애플 태블릿");
         tabletFactory1.setName("구글 태블릿");
         System.out.println("현재 공장은 " + tabletFactory1.getName() + " 공장으로 변경되었습니다.");
         tabletFactory1.produce("구글 태블릿");
