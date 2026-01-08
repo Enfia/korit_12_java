@@ -9,11 +9,6 @@ public class CentralControl {
 
     public void addDevice(Power device){
         int emptyIndex = checkEmpty();
-//        for(int i = 0; i < deviceArray.length; i++){
-//            if(deviceArray[i] == null){
-//                emptyIndex = i;
-//            } else emptyIndex = -1;
-//        }
         // 비어 있으면 추가 / 없으면 연결 못함
         if(emptyIndex == -1){
             System.out.println("더 이상 장치를 연결할 수 없습니다.");
@@ -34,8 +29,123 @@ public class CentralControl {
 
     public void powerOn(){
         for(int i= 0; i < deviceArray.length; i++){
-            deviceArray[i].on();
+            if(deviceArray[i] == null) {
+                System.out.println("장치가 없어 전원을 킬 수 없습니다.");
+                continue; // return으로 마무리 했을 때와의 콘솔 상에서의 차이점을 확인하면 더 명확해집니다.
+                /*
+                    break는 반복문을 즉시 종료하는 명령어
+                    return은 메서드를 즉시 종료하는 명령어
+                    continue는 현재 반복만 종료하고 다음 반복으로 넘어감
+                    즉 deviceArray[6]이 null 이라면 다음 반복으로 i++ 시켜서 deviceArray[7]을 검사하고 deviceArray.length 미만까지
+                    전체 다 확인을 하는 형태라고 할 수 있습니다.
+                    그러면 6번지는 비어있고 7번지에 Power의 서브 클래스의 인스턴스가 존재하는 상황에서 6번지는 실행 안되고 7번지는 실행되겠네요.
+                 */
+            } else {
+                deviceArray[i].on();
+            }
+
         }
     }
 
+    public void powerOff(){
+        for (Power array : deviceArray){
+            if(array == null){
+                System.out.println("장치가 없어 전원을 끌 수 없습니다.");
+                continue;
+            } else{
+                array.off();
+            }
+        }
+    }
+
+    public void showInfo(){
+        for (int i = 0; i < deviceArray.length; i++){
+            if(deviceArray[i] == null){
+                System.out.println("슬롯 [ " + (i+1) + " ] 번 : Empty");
+                continue;
+            } else{
+                System.out.println("슬롯 [ " + (i+1) + " ] 번 : " + deviceArray[i].getClass().getSimpleName());
+            }
+        }
+    }
+
+    public void showInfo2(){
+        int i = 0;
+        for (Power device : deviceArray){
+            if(device == null){
+                System.out.println("슬롯 [ " + (++i) + " ] 번 : Empty");
+            } else{
+                System.out.println("슬롯 [ " + (++i) + " ] 번 : " + device.getClass().getSimpleName());
+            }
+        }
+    }
+    // showInfo2는 향상된 for문으로 작성하시오
+    public void performSpecificMethod(){
+        for( Power device : deviceArray){
+            if(device instanceof AirConditioner){
+                AirConditioner airConditioner = (AirConditioner) device;
+                airConditioner.changeMode();
+            }else if(device instanceof Computer){
+                Computer computer = (Computer) device;
+                computer.compute();
+            } else if(device instanceof LED){
+                LED led = (LED) device;
+                led.changeColor();
+            } else if(device instanceof Mouse){
+                Mouse mouse = (Mouse) device;
+                mouse.leftClick();
+            } else if (device == null){
+                System.out.println("연결 안됨");
+            } else if (device instanceof Printer){
+                Printer printer = (Printer) device;
+                printer.print();
+            }else if (device instanceof  Speaker){
+                Speaker speaker = (Speaker) device;
+                speaker.changeEqual();
+
+            }else {
+                System.out.println("아직 지원되지 않는 전자기기입니다.");
+            }
+        }
+    }
+
+    public void deleteDevice(String name){
+//        for(Power device : deviceArray){
+//            if(device == null){
+//                System.out.println("없음");
+//                continue;
+//            } else if (device.getClass().getSimpleName() == name) {
+//                System.out.println("성공함");
+//                device = null;
+//            } else{
+//                System.out.println("실패함");
+//                continue;
+//            }
+//        }
+
+        for(int i = 0; i < deviceArray.length; i++){
+            if(deviceArray[i] == null){
+                continue;
+            } else if (deviceArray[i].getClass().getSimpleName().equals(name)) {
+                System.out.println(name + "를 삭제를 성공함");
+                deviceArray[i] = null;
+            } else{
+                continue;
+            }
+        }
+    }
+
+    public void deleteDevice(int num){ // 몇번 삭제할건지 입력해라
+        num -= 1;
+        for(int i = 0; i<deviceArray.length; i++){
+            if(deviceArray[i] == null){
+                continue;
+            } else if(num == i){
+                System.out.println( i + "번 삭제를 성공함");
+                deviceArray[i] = null;
+            } else{
+                continue;
+            }
+        }
+    }
 }
