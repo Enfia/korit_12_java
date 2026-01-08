@@ -30,7 +30,7 @@ public class Main {
         System.out.println(tvRemoteController.onUpChannelUp());
         System.out.println("--------------------------------------------------------");
         /*
-        --------------------------------------------------------
+        -------------------------------------------------------
             VolumeDownButton 클래스를 정의하시오.
             VolumeUpBotton 클래스를 정의하시오.
             그리고 Main에서
