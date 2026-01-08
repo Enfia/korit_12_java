@@ -1,24 +1,30 @@
 package ch14_casting.centralcontrol;
 
 public class CentralControl {
-    private Power[] deviceArray;
+    private Power[] deviceArray; //갑자기 왜 배열이 나옴?
 
     public CentralControl(Power[] deviceArray) {
         this.deviceArray = deviceArray;
-    }
+    } // 매개변수를 배열로 받는 생성자인데 이게 그냥 배열을 넣는다는 의미인가?
 
-    public void addDevice(Power device){
-        int emptyIndex = checkEmpty();
+    public void addDevice(Power device){  // addDevice 매개변수를 배열로 받는 친구인거 같음
+        int emptyIndex = checkEmpty(); //checkEmpty 함수를 확인해보자
         // 비어 있으면 추가 / 없으면 연결 못함
+        // 방금 리턴해준 -1이 들어오면 장치를 연결할 수 없다고 해줌
         if(emptyIndex == -1){
             System.out.println("더 이상 장치를 연결할 수 없습니다.");
             return;
         }
+        // 0, 1, 2, 3, 4.... 암튼
+        // 숫자를 차례대로 하나씩 넣어주는 거 같음
+
+        // 매개변수로 받은 것을 deviceArray 배열에다가 넣음
         deviceArray[emptyIndex] = device;
+        // 배열 넣고 device의 이름을 출력하고 장치가 추가 됐다고 알려줌
         System.out.println(device.getClass().getSimpleName()+ "장치가 추가 되었습니다.");
     }
 
-    private int checkEmpty(){
+    private int checkEmpty(){ // 음 대충 배열 하나씩 검사하고 빈 공간이 있으면 i를 리턴해주고 아니면 -1을 리턴해줌
         for(int i = 0; i < deviceArray.length; i++){
             if(deviceArray[i] == null) {
                 return i;
@@ -27,7 +33,9 @@ public class CentralControl {
         return -1;
     }
 
-    public void powerOn(){
+    public void powerOn(){  // 함수인데 뭔가 반복문이 있는데 배열에 있는거 하나씩 확인하고 비어 있으면 장치가 없어 전원을... 어쩌고 해줌
+        // 아니라면 현재 배열에 있는거 on() 함수 실행 시켜줌 만약에
+        // deviceArray[1] 에 있는것이 변수인데 변수에 new Computer 자습시간에 여기까지함
         for(int i= 0; i < deviceArray.length; i++){
             if(deviceArray[i] == null) {
                 System.out.println("장치가 없어 전원을 킬 수 없습니다.");
