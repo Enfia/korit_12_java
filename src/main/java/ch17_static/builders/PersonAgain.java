@@ -1,15 +1,11 @@
 package ch17_static.builders;
 
-
-// 확인하기
-public class Person {
-
-    //변수 name, age, adress private이라서
+public class PersonAgain {
     private String name;
     private int age;
     private String address;
 
-    private Person(Builder builder){  // 생성자임
+    private PersonAgain (Builder builder){
         this.name = builder.name;
         this.age = builder.age;
         this.address = builder.address;
@@ -22,22 +18,18 @@ public class Person {
 
         public Builder name(String name){
             this.name = name;
-            return this; // Builder 클래스의 객체가 리턴됨
-        }
-
-        public Builder age(int age){
-            this.age = age;
             return this;
         }
-
-        public Builder address(String address){
-            this.address = address;
+        public Builder age(int name){
+            this.age = name;
             return this;
         }
-        public Person build(){
-            return new Person(this);
+        public Builder address(String name){
+            this.address = name;
+            return this;
+        }
+        public PersonAgain builder(){
+            return new PersonAgain(this);
         }
     }
 }
-
-
