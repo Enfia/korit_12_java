@@ -137,8 +137,7 @@ public class CentralControl {
             } else if (deviceArray[i].getClass().getSimpleName().equals(name)) {
                 System.out.println(name + "를 삭제를 성공함");
                 deviceArray[i] = null;
-            } else{
-                continue;
+                return;
             }
         }
     }
