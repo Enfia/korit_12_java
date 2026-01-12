@@ -15,7 +15,6 @@ public class UserEntity {
     }
 
     // setter 사용 getter는 위에 롬복 함
-    햣
     public void setUsername(int username) {
         this.username = username;
     }
