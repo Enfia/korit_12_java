@@ -1,5 +1,6 @@
 package ch15_objects;
 
+// 쉬움
 public class ObjectTestMain {
     public static void main(String[] args) {
 //        ObjectTest object1 = new ObjectTest();

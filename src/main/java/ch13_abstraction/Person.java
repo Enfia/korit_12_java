@@ -1,5 +1,7 @@
 package ch13_abstraction;
 
+
+// 쉬움 추상 클래스임
 public abstract class Person{
     private String name;
     //AllArgsConstructor
@@ -7,6 +9,6 @@ public abstract class Person{
         this.name= name;
     }
 
-    //함수 예시
+    // 필수 함수임
     public abstract void introduce();
 }

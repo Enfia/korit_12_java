@@ -2,6 +2,7 @@ package ch15_objects.teachers;
 
 import java.util.Objects;
 
+// 쉬움
 public class Teacher {
     private String name;
     private String school;

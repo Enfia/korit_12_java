@@ -27,7 +27,7 @@ public class Array17 {
                 }
 
                 else {
-                    i--; // ??????
+                    i--; // 다시 뽑으라고 시키는 거임
                 }
 
                 cnt++;

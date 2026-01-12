@@ -1,17 +1,22 @@
 package ch13_abstraction;
 
+
+// 쉬움 Person 클래스를 상속받음
 public class Student extends Person{
     private String school;
 
+    // 매개변수가 필요한 생성자
     public Student(String name) {
         super(name);
     }
 
+    // Person에 name이 있기 때문에 가능
     public Student(String name, String school) {
         super(name);
         this.school = school;
     }
 
+    // 없으면 에러뜸
     @Override
     public void introduce() {
 

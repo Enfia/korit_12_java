@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+// 쉬움
 public class TeacherMain {
     public static void main(String[] args) {
         Teacher teacher1 = new Teacher("안근수", "코리아아이티");

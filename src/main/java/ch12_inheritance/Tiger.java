@@ -3,6 +3,7 @@ package ch12_inheritance;
 
 // extends 는 상속 받는 거긴 한데 그대로 복사 해온게 아니라 부모 클래스에 있는 것을 사용한다
 
+// 쉬움 부모 클래스가 Animal이고 자식 클래스가 Tiger임
 public class Tiger extends Animal{
     private double weight;
 
