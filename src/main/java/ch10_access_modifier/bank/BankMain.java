@@ -1,10 +1,8 @@
 package ch10_access_modifier.bank;
 
+// 쉬움 (솔모뒤)
 public class BankMain {
     public static void main(String[] args) {
-//        Bank test1 = new Bank(123456, "홍길동", 1000000);
-//        test1.setPinNumber(12345);
-//        test1.showAccountInfo();
 
         Bank account1 = new Bank(123456, "홍길동", 100000, 1234);
         Bank account2 = new Bank(987654, "신사임당", 500000, 1234);

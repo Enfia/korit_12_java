@@ -1,5 +1,6 @@
 package ch10_access_modifier;
 
+// 한 파일안에 클래스가 두개임 public 붙어있으면 그게 메인임 솔모뒤
 class Character{
     public String name; // 공개 가능
     private int health; // 읽기 전용
@@ -58,14 +59,7 @@ class Character{
     public int getExp() {
         return exp;
     }
-// 이건 그냥 add 이므로 return은 필요없다
-//    public int getExp(int amount) {
-//        this.exp = exp + amount;
-//        System.out.println(name + "가 "+  amount + " 경험치를 얻음");
-//        System.out.println(name + "의 경험치 : " + this.exp);
-//        return exp;
-//    }
-    // 수정 버전
+
     private void gainExp(int amount){
         this.exp = exp + amount;
         System.out.println(name + "가 "+  amount + " 경험치를 얻음");
