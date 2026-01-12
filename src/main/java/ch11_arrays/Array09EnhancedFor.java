@@ -1,7 +1,6 @@
 package ch11_arrays;
 
-import java.util.Arrays;
-
+// 쉬움
 public class Array09EnhancedFor {
     public static void main(String[] args) {
         String[] persons = {"김일", "김이", "김삼", "김사", "김오"};
@@ -16,15 +15,5 @@ public class Array09EnhancedFor {
         for(String person : persons){
             System.out.println((++i) + "번 : " + person);
         }
-
-
-//          내풀이
-//        for(String person : persons){
-//            int i = 0;
-//            while(i < 5){
-//                System.out.println(i);
-//                i++;
-//            }
-//        }
     }
 }

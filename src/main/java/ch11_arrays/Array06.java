@@ -1,5 +1,6 @@
 package ch11_arrays;
 
+// 쉬움
 public class Array06 {
     int sum = 0;
     double avg = 0;

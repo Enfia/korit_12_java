@@ -3,14 +3,8 @@ package ch11_arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// 쉬움
 public class Array03Method {
-// 복습하기
-// inputNum() 메서드를 정의해서 배열의 한계값들을 입력 받는 메서드를 구현하고
-// inputNames()에서 한계값 설정하는 부분을 다 분리한 후에
-// 동일한 실행 예가 나올 수 있도록 개조하시오.
-// 그 경우 method overloading을 통해 inputScores에 String[]이 매개변수인 경우와
-// int num이 매개변수인 경우로 나누어 inputScores()의 매개변수가 무엇이냐에 따라 이름학생의 점수를 입력하시오 >>> 가 나오거나
-// n 번째 학생의 점수를 입력하세요 >>> 가 나올 수 있도록 하시오.
 
     private String[] inputNames(){
         Scanner sc = new Scanner(System.in);

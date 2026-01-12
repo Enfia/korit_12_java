@@ -27,7 +27,6 @@ class Person{
 
 public class PersonMain {
     public static void main(String[] args) {
-
         // person1이라는 객체를 생성함
         // 그다음에 setter활용해서 현제 이름을 출력함
         Person person1 = new Person();

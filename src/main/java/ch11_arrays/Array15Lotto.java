@@ -3,6 +3,7 @@ package ch11_arrays;
 import java.util.Arrays;
 import java.util.Random;
 
+// 쉬움
 public class Array15Lotto {
     public static void main(String[] args) {
         int[] lottoNumber = new int[6];
@@ -14,14 +15,5 @@ public class Array15Lotto {
             }
             System.out.println(Arrays.toString(lottoNumber));
         }
-
-
-//        for (int i : lottoNumber){
-//            int asd = rd.nextInt(45) + 1;
-//            if (i == asd){
-//                break;
-//            }
-//            System.out.print(asd + " ");
-//        }
     }
 }
