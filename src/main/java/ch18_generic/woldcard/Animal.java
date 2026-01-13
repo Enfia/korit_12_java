@@ -1,4 +1,5 @@
 package ch18_generic.woldcard;
 
-public class Animal {
+public abstract class Animal {
+    public abstract void move();
 }

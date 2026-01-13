@@ -1,13 +1,17 @@
 package ch18_generic.bmi;
 
 public class Bmi {
-    double result;
 
+    // 필드 변수 선언
+    private double result;
+
+    // 객체를 매개변수로 받고 getter 사용해서 값 들고 옴 계산 끝나면 result 리턴함
     private double calcBmi(Person person){
         result = person.getWeight() / ((person.getHeight()/ 100) * (person.getHeight() / 100));
         return result;
     }
 
+    // 객체를 매개변수로 받고 calcBmi를 실행하고 result의 결과값에 따라서 bmi를 저체중 / 정상 ... 으로 하고 print 해줌
     public void printResult(Person person){
         calcBmi(person);
         String bmi;
