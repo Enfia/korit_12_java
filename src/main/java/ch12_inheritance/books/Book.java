@@ -1,5 +1,6 @@
 package ch12_inheritance.books;
 
+// 쉬움
 public class Book {
     private String title;
     private String author;

@@ -1,5 +1,6 @@
 package ch14_casting.centralcontrol;
 
+// 쉬움
 public class CentralControlMain {
     public static void main(String[] args) {
         AirConditioner airConditioner1 = new AirConditioner();

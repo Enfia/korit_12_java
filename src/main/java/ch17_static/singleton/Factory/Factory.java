@@ -4,10 +4,12 @@ package ch17_static.singleton.Factory;
 public class Factory {
     private String factoryName;
 
+    // 생성자
     public Factory(String factoryName) {
         this.factoryName = factoryName;
         System.out.println(factoryName + "이 완공되었습니다.");
     }
+
 
     public SmartPhone produceSmartPhone(){
         System.out.println(factoryName + "에서 스마트폰을 생산합니다.");

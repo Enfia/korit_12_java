@@ -1,13 +1,14 @@
 package ch14_casting.centralcontrol;
 
+
 public class CentralControl {
-    private Power[] deviceArray; //갑자기 왜 배열이 나옴?
+    private Power[] deviceArray; //Power[] 타입의 필드 변수명이 deviceArray임
 
     public CentralControl(Power[] deviceArray) {
         this.deviceArray = deviceArray;
     } // 매개변수를 배열로 받는 생성자인데 이게 그냥 배열을 넣는다는 의미인가?
 
-    public void addDevice(Power device){  // addDevice 매개변수를 배열로 받는 친구인거 같음
+    public void addDevice(Power device){  // addDevice 배열에 넣을 하나의 장치를 받는 애임
         int emptyIndex = checkEmpty(); //checkEmpty 함수를 확인해보자
         // 비어 있으면 추가 / 없으면 연결 못함
         // 방금 리턴해준 -1이 들어오면 장치를 연결할 수 없다고 해줌

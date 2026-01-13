@@ -3,13 +3,13 @@ package ch13_abstraction.interfaces;
 // 쉬움
 public class AirConditionerController {
 
-    // 객체를 받음?
+    // 필드 변수에 인터페이스 타입 변수 = 구현 객체의 주소를 담는 변수임
     private PowerButton powerButton;
     private ModeChangeButton modeChangeButton;
     private TemperatureDownButton temperatureDownButton;
     private TemperatureUpButton temperatureUpButton;
 
-    // 객체들을 필수로 생성자로 받음
+    // 인터페이스 타입 참조 변수를 생성자로 주입받음
     public AirConditionerController(PowerButton powerButton, ModeChangeButton modeChangeButton, TemperatureDownButton temperatureDownButton, TemperatureUpButton temperatureUpButton) {
         this.powerButton = powerButton;
         this.modeChangeButton = modeChangeButton;

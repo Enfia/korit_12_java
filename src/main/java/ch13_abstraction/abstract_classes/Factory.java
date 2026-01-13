@@ -13,7 +13,7 @@ public abstract class Factory {
     // 변수(필드) 선언
     private String name;
 
-    // 함수 선언함 얘네는 필수적으로 있어야함 그래서 @Override를 써서
+    // 함수 선언함 얘네는 필수적으로 있어야함 그래서 @Override를 쓰기
     public abstract void produce(String model);
     public abstract void manage();
 

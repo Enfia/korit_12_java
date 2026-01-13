@@ -1,6 +1,6 @@
 package ch12_inheritance.products;
 
-
+// 쉬움
 public class ProductMain {
     public static void main(String[] args) {
         Item item1 = new Item("일반", "일반");

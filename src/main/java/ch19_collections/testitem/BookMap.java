@@ -2,6 +2,8 @@ package ch19_collections.testitem;
 
 import java.util.*;
 
+
+// ch14_casting 부터 복습하시오
 public class BookMap {
     public static void main(String[] args) {
         Map<String, Integer> bookMap1 = new HashMap<>();
@@ -34,9 +36,9 @@ public class BookMap {
                         System.out.println("새로운 재고 수량을 입력하세요 >>>");
                         bookNum = sc.nextInt();
                         bookMap1.put(name, bookNum);
-                        System.out.println(name + " 도서가 "+ bookNum + "권 추가되었습니다.");
+                        System.out.println(name + " 도서가 "+ bookNum + "권으로 추가되었습니다.");
                     } else{
-                        System.out.println("실패하였습니다");
+                        System.out.println("해당 도서가 재고에 없습니다.");
                         continue;
                     }
                     continue;
@@ -45,11 +47,10 @@ public class BookMap {
                         System.out.println("도서명 : " + entrySet.getKey() + " 재고 수량 : " +entrySet.getValue());
                     }
                     continue;
-                default:
+                case 4:
                     System.out.println("종료");
-                    break;
+                    return;
             }
-            break;
         }
     }
 }

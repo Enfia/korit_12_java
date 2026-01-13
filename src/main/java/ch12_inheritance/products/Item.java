@@ -1,5 +1,6 @@
 package ch12_inheritance.products;
 
+// 쉬움
 public class Item {
     private String name;
     private String category;
