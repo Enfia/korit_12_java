@@ -1,5 +1,8 @@
 package ch99_practice.ch14_casting.game.system;
 
+import ch99_practice.ch14_casting.game.items.Bow;
+import ch99_practice.ch14_casting.game.items.Staff;
+import ch99_practice.ch14_casting.game.items.Sword;
 import ch99_practice.ch14_casting.game.items.Weapon;
 
 public class Inventory {
@@ -33,4 +36,29 @@ public class Inventory {
         // null이면은 메서드 리턴해서 멈추고 다음 실행문이 실행되니까
         // null이면 무기 넣고 아니면은 무기를 넣을 수 없음이라고 출력하고
     }
+    public void attackAll(){
+        for(Weapon weapon: weaponSlots){
+            if(weapon == null){
+                System.out.println("무기가 없어 공격할 수 없습니다.");
+            } else{
+                weapon.attack();
+            }
+
+        }
+    }
+    public void useSpecialAbilities(){
+        for(Weapon weapon: weaponSlots){
+            if(weapon instanceof Sword){
+                Sword sword = (Sword) weapon;
+                sword.parry();
+            } else if (weapon instanceof Bow){
+                Bow bow = (Bow) weapon;
+                bow.snipe();
+            } else if (weapon instanceof Staff){
+                Staff staff = (Staff) weapon;
+                staff.castSpell();
+            }
+        }
+    }
+
 }
