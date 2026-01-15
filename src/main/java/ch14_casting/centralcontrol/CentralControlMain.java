@@ -3,14 +3,16 @@ package ch14_casting.centralcontrol;
 // 쉬움
 public class CentralControlMain {
     public static void main(String[] args) {
+        // 객체 만듦
         AirConditioner airConditioner1 = new AirConditioner();
         Computer computer1 = new Computer();
         Mouse mouse1 = new Mouse();
         LED led1 = new LED();
         Printer printer1 = new Printer();
         Speaker speaker1 = new Speaker();
+
+        // 객체 만듦
         CentralControl centralControl1 = new CentralControl(new Power[7]);
-        Power[] powers = {new AirConditioner(), new Computer(), new Mouse(), new LED(), new Printer(), new Speaker()};
         centralControl1.addDevice(airConditioner1);
         centralControl1.addDevice(computer1);
         centralControl1.addDevice(mouse1);

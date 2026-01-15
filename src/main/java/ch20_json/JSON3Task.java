@@ -1,4 +1,4 @@
-package ch20_josn;
+package ch20_json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

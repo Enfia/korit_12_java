@@ -88,9 +88,11 @@ public class CentralControl {
             }
         }
     }
-    // showInfo2는 향상된 for문으로 작성하시오
     public void performSpecificMethod(){
         for( Power device : deviceArray){
+            // deviceArray에는 new AirConditioner이 들어가있음 근데 부모 타입으로 선언한게 아니라 자식
+            // 클래스로 선언함
+            // 설마 받는게 부모인가?
             if(device instanceof AirConditioner){
                 AirConditioner airConditioner = (AirConditioner) device;
                 airConditioner.changeMode();
