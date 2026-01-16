@@ -1,4 +1,4 @@
-package ch99_practice.ch14_casting.centralcontrol;
+package ch99_practice.ch14_casting.centralcontrol_again;
 
 public class Computer implements Power{
     @Override

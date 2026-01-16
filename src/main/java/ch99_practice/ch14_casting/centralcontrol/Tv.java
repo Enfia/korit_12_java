@@ -1,13 +1,13 @@
 package ch99_practice.ch14_casting.centralcontrol;
 
-public class Computer implements Power{
+public class Tv implements Power{
     @Override
     public void on() {
-        System.out.println("Computer ON");
+        System.out.println("TV ON");
     }
 
     @Override
     public void off() {
-        System.out.println("Computer OFF");
+        System.out.println("TV OFF");
     }
 }
