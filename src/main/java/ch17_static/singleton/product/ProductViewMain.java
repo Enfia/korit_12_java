@@ -5,6 +5,10 @@ public class ProductViewMain {
         ProductView.getInstance();
         ProductView.getInstance();
         ProductView.getInstance();
+        ProductView.getInstance();
+        ProductView.getInstance();
+        ProductView.getInstance();
+        ProductView.getInstance();
         System.out.println(ProductView.count);
         System.out.println(ProductView.getInstance().toString());
     }
